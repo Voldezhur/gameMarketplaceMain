@@ -10,6 +10,6 @@ exports.home = (req, res) => {
     res.sendFile('./home.html', {root: __dirname})
 }
 
-// exports.gamePage = (req, res) => {
-//     req.
-// }
+exports.reactTest = (req, res) => {
+    res.send("Hello, world!");
+}
