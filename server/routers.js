@@ -1,10 +1,10 @@
 const RouterClass = require('express').Router
 
-const users = require('./main')
+const mainRoutes = require('./main')
 
 const router = new RouterClass()
-router.get('/', users.userinfo)
-router.get('/test', users.testhtml)
-router.get('/home', users.home)
+router.get('/', mainRoutes.userinfo)
+router.get('/test', mainRoutes.testhtml)
+router.get('/home', mainRoutes.home)
 
 module.exports.router = router
