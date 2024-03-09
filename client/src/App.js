@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import {useMemo} from 'react';
-import axios from 'axios';
+import axios from 'axios';  // Для связи бека и фронта
 
 import './styles/App.css';
 
