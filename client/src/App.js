@@ -22,16 +22,28 @@ const App = () => {
   }, [])
 
   return (
-    <AuthContext.Provider value={{
-      isAuth,
-      setIsAuth,
-      isLoading
-    }}>
-      <BrowserRouter>
-        <Navbar />
-        <AppRouter />
-      </BrowserRouter>
-    </AuthContext.Provider>
+    isAuth
+      ?
+      <AuthContext.Provider value={{
+        isAuth,
+        setIsAuth,
+        isLoading
+      }}>
+        <BrowserRouter>
+          <Navbar />
+          <AppRouter />
+        </BrowserRouter>
+      </AuthContext.Provider>
+      :
+      <AuthContext.Provider value={{
+        isAuth,
+        setIsAuth,
+        isLoading
+      }}>
+        <BrowserRouter>
+          <AppRouter />
+        </BrowserRouter>
+      </AuthContext.Provider>
   )
 }
 
