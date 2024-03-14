@@ -16,5 +16,8 @@ export const privateRoutes = [
 // Пути для неавторизованного пользователя
 export const publicRoutes = [
     { path: "/", element: <Login />, exact: true },
+    { path: "/games", element: <Login />, exact: true },
+    { path: "/games/:id", element: <Login />, exact: true },
+    { path: "/support", element: <Login />, exact: true },
     { path: "*", element: <Error />, exact: true },
 ]

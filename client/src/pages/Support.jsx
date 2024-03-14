@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import '../styles/App.css';
 import '../styles/Support.css';
 
+import MyModal from '../components/UI/MyModal/MyModal';
 import MyButton from '../components/UI/button/MyButton';
 
 // Страница поддержки
 const Support = () => {
+    const [modalSupport, setModalSupport] = useState(false);
+
     return (
         <div className="mainContent">
             <div className="welcome">
                 <h1>
-                    Добро пожаловать в раздел поддержки!
+                    Добро пожаловать в раздел поддержки!<br/>
                     Чем мы можем Вам помочь?
                 </h1>
             </div>
@@ -32,9 +35,12 @@ const Support = () => {
                 </div>
             </div>
             <div className="any_questions">
-                <MyButton>
+                <MyButton onClick={() => setModalSupport(true)}>
                     Напишите нам
                 </MyButton>
+                <MyModal visible={modalSupport} setVisible={setModalSupport}>
+                    <h1>Форма для моральной поддержки</h1>
+                </MyModal>
             </div>
         </div>
     )

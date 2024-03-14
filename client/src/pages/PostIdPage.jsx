@@ -39,7 +39,7 @@ const PostIdPage = () => {
                 </div>
             }
 
-            <h1> Комментарии</h1>
+            <h1>Комментарии</h1>
 
             {isCommentsLoading
                 ? <Loader />
