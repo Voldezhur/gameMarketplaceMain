@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../context';
 
-import MyButton from '../button/MyButton';
+import cl from './Navbar.module.css';
 
 const Navbar = () => {
     const {isAuth, setIsAuth} = useContext(AuthContext);
@@ -13,12 +13,13 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar">
-            <div className="navbar__links">
-                <Link to="/about">О сайте</Link>
-                <Link to="/posts">Посты</Link>
+        <div className={cl.navbar}>
+            <div className={cl.navbar__items}>
+                <Link to="/" className={cl.navbar__link}>XTHs Logo</Link>
+                <button className={cl.navbar__link}>Меню</button>
+                <Link to="/support" className={cl.navbar__link}>Поддержка</Link>
+                <button onClick={logout} className={cl.navbar__link}>Выйти</button>
             </div>
-            <MyButton onClick={logout}>Выйти</MyButton>
         </div>
     )
 }

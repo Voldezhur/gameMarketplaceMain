@@ -1,7 +1,9 @@
+// Возвращает количество страниц пагинации
 export const getPageCount = (totalCount, limit) => {
     return Math.ceil(totalCount / limit);
 }
 
+// Возвращает массив с номерами страниц пагинации
 export const getPagesArray = (totalPages) => {
     let result = [];
     for (let i = 0; i < totalPages; i++) {

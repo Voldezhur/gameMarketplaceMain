@@ -1,5 +1,6 @@
 import axios from "axios";
 
+// Класс со статичными методами для работы с внешним API
 export default class PostService {
     static async getAll(limit = 10, page = 1) {
         const response = await axios.get('https://jsonplaceholder.typicode.com/posts', {

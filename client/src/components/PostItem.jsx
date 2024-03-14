@@ -7,7 +7,7 @@ const PostItem = (props) => {
     const navigate = useNavigate();
 
     function transitToPost(id) {
-        navigate(`/posts/${id}`, {replace: false})
+        navigate(`/games/${id}`, {replace: false})
     }
 
     return (
@@ -18,7 +18,7 @@ const PostItem = (props) => {
                     {props.post.body}
                 </div>
             </div>
-            <div className="post__btns">
+            <div className="post__buttons">
                 <MyButton onClick={() => transitToPost(props.post.id)}>
                     Открыть
                 </MyButton>

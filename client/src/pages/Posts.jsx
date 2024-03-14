@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import '../styles/App.css';
+import '../styles/Posts.css';
 
 import PostList from '../components/PostList';
 import PostForm from '../components/PostForm';
@@ -14,6 +15,7 @@ import { useFetching } from '../hooks/useFetching';
 import { getPageCount, getPagesArray } from '../utils/pages';
 import Pagination from '../components/UI/pagination/Pagination';
 
+// Страница каталога игр
 const Posts = () => {
   const [posts, setPosts] = useState([]);
   const [filter, setFilter] = useState({sort: '', query: ''});
@@ -49,7 +51,7 @@ const Posts = () => {
   }
 
   return (
-    <div className="App">
+    <div className="mainContent">
       <MyButton style={{marginTop: '30px'}} onClick={() => setModal(true)}>
         Создать пост
       </MyButton>
