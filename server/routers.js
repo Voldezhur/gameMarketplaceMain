@@ -1,6 +1,6 @@
 const RouterClass = require('express').Router
 
-const mainRoutes = require('./main')
+const mainRoutes = require('./oldRoutes')
 
 const router = new RouterClass()
 router.get('/', mainRoutes.reactTest)
