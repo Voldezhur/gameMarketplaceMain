@@ -5,6 +5,7 @@ import '../styles/Support.css';
 
 import MyModal from '../components/UI/MyModal/MyModal';
 import MyButton from '../components/UI/button/MyButton';
+import MyInput from '../components/UI/input/MyInput';
 
 // Страница поддержки
 const Support = () => {
@@ -39,7 +40,10 @@ const Support = () => {
                     Напишите нам
                 </MyButton>
                 <MyModal visible={modalSupport} setVisible={setModalSupport}>
-                    <h1>Форма для моральной поддержки</h1>
+                    <form>
+                        <MyInput type="textarea" placeholder="Введите сообщение"/>
+                        <MyButton>Отправить</MyButton>
+                    </form>
                 </MyModal>
             </div>
         </div>

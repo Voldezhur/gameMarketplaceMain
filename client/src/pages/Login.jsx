@@ -19,12 +19,15 @@ const Login = () => {
 
     return (
         <div className="mainContent">
-            <h1>Войти</h1>
-            <form onSubmit={login} className="loginForm">
-                <MyInput type="text" placeholder='Введите логин'/>
-                <MyInput type="password" placeholder='Введите пароль'/>
-                <MyButton>Войти</MyButton>
-            </form>
+            <h1 style={{textAlign: 'center'}}>XTNs Games</h1>
+            <div className="loginBlock">
+                <h2>Авторизация</h2>
+                <form onSubmit={login} className="loginForm">
+                    <MyInput type="text" placeholder='Введите логин'/>
+                    <MyInput type="password" placeholder='Введите пароль'/>
+                    <MyButton>Войти</MyButton>
+                </form>
+            </div>
         </div>
     )
 }
