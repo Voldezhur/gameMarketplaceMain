@@ -1,5 +1,6 @@
 import { useState } from "react"
 
+// Кастомный хук, возвращает результат колбека, флаг загрузки, флаг ошибки
 export const useFetching = (callback) => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');

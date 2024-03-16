@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-import './styles/App.css';
-
 import Navbar from './components/UI/Navbar/Navbar';
 import AppRouter from './components/AppRouter';
 import { AuthContext } from './context';
+import Footer from './components/UI/Footer/Footer';
 
 const App = () => {
   const [isAuth, setIsAuth] = useState(false);
@@ -32,6 +31,7 @@ const App = () => {
         <BrowserRouter>
           <Navbar />
           <AppRouter />
+          <Footer />
         </BrowserRouter>
       </AuthContext.Provider>
       :
@@ -42,6 +42,7 @@ const App = () => {
       }}>
         <BrowserRouter>
           <AppRouter />
+          <Footer />
         </BrowserRouter>
       </AuthContext.Provider>
   )

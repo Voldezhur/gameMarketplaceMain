@@ -1,5 +1,6 @@
 import {useMemo} from 'react';
 
+// Кастомный хук, возвращает новый массив постов по сортировке
 export const useSortedPosts = (posts, sort) => {
   
     const sortedPosts = useMemo(() => {
@@ -12,6 +13,7 @@ export const useSortedPosts = (posts, sort) => {
     return sortedPosts;
 }
 
+// Кастомный хук, возвращает новый массив постов по сортировке и фильтру
 export const usePosts = (posts, sort, query) => {
     const sortedPosts = useSortedPosts(posts, sort);
 

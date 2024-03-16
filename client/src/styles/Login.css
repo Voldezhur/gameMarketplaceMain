@@ -1,0 +1,10 @@
+.loginBlock {
+    width: 50%;
+    min-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.loginForm {
+    margin: 10px 0;
+}

@@ -2,8 +2,8 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 5px dashed teal;
-    animation: rotate 1s infinite linear;
+    border: 5px dashed #363d56;
+    animation: rotate 2s infinite linear;
 }
 
 @keyframes rotate {
