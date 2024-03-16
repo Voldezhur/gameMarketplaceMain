@@ -1,0 +1,21 @@
+const db = require("./postgresConfig");
+
+exports.getAllUsers = (req, res) => {
+    db.pool.query("SELECT * FROM users ORDER BY uid ASC", (err, result) => {
+        if (err) {
+            throw err;
+        }
+
+        res.status(200).json(result.rows);
+    });
+}
+
+exports.getAllGames = (req, res) => {
+    db.pool.query("SELECT * FROM games ORDER BY game_id ASC", (err, result) => {
+        if (err) {
+            throw err;
+        }
+
+        res.status(200).json(result.rows);
+    });
+}
