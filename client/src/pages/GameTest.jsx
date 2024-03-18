@@ -4,16 +4,17 @@ import axios from 'axios';
 import '../styles/App.css';
 import '../styles/Error.css';
 
+// response это ответ с сервера
 const getGames = () => {
-    axios.get('https://localhost:8000').then((data) => {
-        console.log(data)
+    axios.get('http://localhost:8000/gamesTest').then((response) => {
+      console.log(response.data)  // Вывод фронтенд консоли
     })
     .catch(function(error) {
         console.log(error)
     })
 }
 
-// Страница уведомления об ошибке
+// Пробный вывод информации с бд в консоль
 const GameTest = () => {
     return (
         <div className="mainContent">
