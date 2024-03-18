@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 import '../styles/App.css';
 import '../styles/Posts.css';
@@ -48,6 +49,16 @@ const Posts = () => {
   const changePage = (page) => {
     setPage(page);
     fetchPosts(limit, page);
+  }
+
+  // response это ответ с сервера
+  const getGames = () => {
+    axios.get('http://localhost:8000/gamesList').then((response) => {
+      return(response.data)  // Вывод фронтенд консоли
+    })
+    .catch(function(error) {
+      console.log(error)
+    })
   }
 
   return (

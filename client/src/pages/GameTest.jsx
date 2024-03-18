@@ -6,7 +6,7 @@ import '../styles/Error.css';
 
 // response это ответ с сервера
 const getGames = () => {
-    axios.get('http://localhost:8000/gamesTest').then((response) => {
+    axios.get('http://localhost:8000/gamesList').then((response) => {
       console.log(response.data)  // Вывод фронтенд консоли
     })
     .catch(function(error) {

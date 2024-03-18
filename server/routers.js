@@ -10,6 +10,6 @@ router.get('/test', mainRoutes.testhtml)
 router.get('/testJson', mainRoutes.userinfo)
 
 router.get('/usersTest', userController.getAllUsers)
-router.get('/gamesTest', userController.getAllGames)
+router.get('/gamesList', userController.getAllGames)
 
 module.exports.router = router
