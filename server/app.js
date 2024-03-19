@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 const port = 8000;
-const routers = require('./routers');
+const router = require('./router');
 
 const cors = require('cors');  // чтобы не было ошибки cors
 const corsOption = {
@@ -20,7 +20,7 @@ app.use(function(req, res, next) {
 });
 // app.use(cors())
 
-app.use('/', routers.router);
+app.use('/', router.mainRouter);
 
 app.listen(port, () => {
   console.log(`Express server listening on port ${port}`)
