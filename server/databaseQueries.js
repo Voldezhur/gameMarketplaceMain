@@ -19,3 +19,15 @@ exports.getAllGames = (req, res) => {
         res.status(200).json(result.rows);
     });
 }
+
+exports.getUserById = (req, res) => {
+    const id = parseInt(req.params.id)
+
+    db.pool.query("SELECT * FROM users WHERE uid = $1", [id], (err, result) => {
+        if (err) {
+            throw err;
+        }
+
+        res.status(200).json(result.rows);
+    });
+}
