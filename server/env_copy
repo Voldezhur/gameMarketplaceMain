@@ -1,0 +1,4 @@
+DB_HOST     = "localhost"
+DB_NAME     = "gamesDatabaseTest"
+DB_USER     = "paygame"
+DB_PASSWORD = "291199"
