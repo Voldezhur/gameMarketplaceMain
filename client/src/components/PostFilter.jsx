@@ -3,6 +3,7 @@ import React from 'react';
 import MyInput from './UI/input/MyInput';
 import MySelect from './UI/select/MySelect';
 
+// Компонент для фильтрации постов
 const PostFilter = ({filter, setFilter}) => {
     return ( 
       <div className="postFilter">
@@ -14,7 +15,6 @@ const PostFilter = ({filter, setFilter}) => {
         <MySelect
           value={filter.sort}
           onChange={selectedSort => setFilter({...filter, sort: selectedSort})}
-          defaultValue="Сортировка"
           options={[
             {value: 'title', name: 'По названию'},
             {value: 'body', name: "По описанию"}

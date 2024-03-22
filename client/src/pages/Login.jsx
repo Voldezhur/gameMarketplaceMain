@@ -9,8 +9,9 @@ import MyButton from '../components/UI/button/MyButton';
 
 // Страница авторизации
 const Login = () => {
-    const {isAuth, setIsAuth} = useContext(AuthContext);
+    const {isAuth, setIsAuth} = useContext(AuthContext); // состояние авторизованности
 
+    // функция авторизации
     const login = (event) => {
         event.preventDefault();
         setIsAuth(true);

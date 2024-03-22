@@ -9,7 +9,7 @@ import MyInput from '../components/UI/input/MyInput';
 
 // Страница поддержки
 const Support = () => {
-    const [modalSupport, setModalSupport] = useState(false);
+    const [modalSupport, setModalSupport] = useState(false); // состояние модального окна
 
     return (
         <div className="mainContent">
@@ -23,14 +23,14 @@ const Support = () => {
                 <h1>
                     Популярные вопросы
                 </h1>
-                <div>
-                    <div>
+                <div className="popular_questions_list">
+                    <div className="popular_questions_item">
                         Если мне не понравится игра, могу ли я вернуть свои деньги?
                     </div>
-                    <div>
+                    <div className="popular_questions_item">
                         Какими способами я могу оплатить товар?
                     </div>
-                    <div>
+                    <div className="popular_questions_item">
                         Как активировать купленный ключ?
                     </div>
                 </div>
@@ -41,6 +41,7 @@ const Support = () => {
                 </MyButton>
                 <MyModal visible={modalSupport} setVisible={setModalSupport}>
                     <form>
+                        <h2>Опишите суть проблемы</h2>
                         <MyInput type="textarea" placeholder="Введите сообщение"/>
                         <MyButton>Отправить</MyButton>
                     </form>

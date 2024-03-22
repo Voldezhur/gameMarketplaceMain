@@ -26,16 +26,25 @@
 .navbar__link:hover {
     background-color: #7575e8;
     color: #fff;
+    cursor: pointer;
+}
+
+.navbar__modalMenu__list {
+    display: flex;
+    flex-direction: column;
+
 }
 
 .navbar__modalMenu__link {
+    display: flex;
     font-size: 20px;
-    padding: 7px 15px;
+    padding: 10px 15px;
     border: 1px solid #363d56;
     background-color: #fff;
     text-decoration: none;
 }
 
 .navbar__modalMenu__link:hover {
-    
+    background-color: #7575e8;
+    color: #fff;
 }

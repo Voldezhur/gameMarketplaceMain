@@ -2,6 +2,7 @@ import React from 'react';
 
 import cl from './Footer.module.css';
 
+// Компонент подвала
 const Footer = () => {
     return (
         <footer className={cl.footer}>

@@ -1,4 +1,6 @@
 .errorMessage {
+    margin: 30px;
+    margin-top: 50px;
     color: red;
     text-align: center;
 }

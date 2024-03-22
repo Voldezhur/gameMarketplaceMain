@@ -1,6 +1,7 @@
 import React from 'react';
 import cl from './MyModal.module.css';
 
+// Компонент модального окна
 const MyModal = ({children, visible, setVisible}) => {
     const rootClasses = [cl.myModal];
     if (visible) {

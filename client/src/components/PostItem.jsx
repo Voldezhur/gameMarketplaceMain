@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import MyButton from "./UI/button/MyButton";
 
+// Компонент поста
 const PostItem = (props) => {
     const navigate = useNavigate();
 
@@ -21,9 +22,6 @@ const PostItem = (props) => {
             <div className="post__buttons">
                 <MyButton onClick={() => transitToPost(props.post.id)}>
                     Открыть
-                </MyButton>
-                <MyButton onClick={() => props.remove(props.post)}>
-                    Удалить
                 </MyButton>
             </div>
         </div>

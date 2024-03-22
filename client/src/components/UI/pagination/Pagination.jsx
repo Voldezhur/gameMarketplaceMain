@@ -3,6 +3,7 @@ import { getPagesArray } from '../../../utils/pages';
 
 import cl from './Pagination.module.css';
 
+// Компонент пагинации
 const Pagination = ({totalPages, page, changePage}) => {
     let pagesArray = getPagesArray(totalPages);
     return (

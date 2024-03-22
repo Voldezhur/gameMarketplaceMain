@@ -9,7 +9,7 @@ const Error = () => {
         <div className="mainContent">
             <h1 className="errorMessage">
                 Error 404<br/>
-                Not Found!
+                Page Not Found!
             </h1>
         </div>
     )
