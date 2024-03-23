@@ -22,7 +22,7 @@ const Catalog = () => {
   // метод получения игр в каталог
   const [fetchGames, isGamesLoading, gameError] = useFetching(async () => {
     const response = await GameService.getAll();
-    setGames(response.data);
+    setGames(response.games);
   })
 
   // хук, используется при первой загрузке страницы

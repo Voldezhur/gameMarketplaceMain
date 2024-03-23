@@ -27,7 +27,7 @@ const Navbar = () => {
                 <div onClick={() => setModalMenu(true)} className={cl.navbar__link}>Меню</div>
                 <MyModal visible={modalMenu} setVisible={setModalMenu} >
                     <div className="navbar__modalMenu__list">
-                        <Link to="/" onClick={() => setModalMenu(false)} className={cl.navbar__modalMenu__link}>Главная</Link>
+                        <Link to="/" onClick={() => setModalMenu(false)} className={cl.navbar__modalMenu__link}>Каталог</Link>
                         <Link to="/support" onClick={() => setModalMenu(false)} className={cl.navbar__modalMenu__link}>Поддержка</Link>
                         <Link to="/cart" onClick={() => setModalMenu(false)} className={cl.navbar__modalMenu__link}>Корзина</Link>
                         <Link to="/profile" onClick={() => setModalMenu(false)} className={cl.navbar__modalMenu__link}>Личный кабинет</Link>

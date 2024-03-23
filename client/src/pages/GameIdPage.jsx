@@ -29,8 +29,10 @@ const GameIdPage = () => {
             <h1>Страница игры с Id = {params.id}!</h1>
 
             {isLoading
-                ? <Loader />
-                : <div className="game">
+                ?
+                <Loader />
+                :
+                <div className="game">
                     {game.game_id}<br/>
                     {game.game_name}<br/>
                     {game.developer_id}<br/>

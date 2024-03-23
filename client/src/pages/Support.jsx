@@ -35,7 +35,7 @@ const Support = () => {
                     </div>
                 </div>
             </div>
-            <div className="any_questions">
+            <div className="any__questions">
                 <MyButton onClick={() => setModalSupport(true)}>
                     Напишите нам
                 </MyButton>

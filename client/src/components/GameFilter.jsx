@@ -6,7 +6,7 @@ import MySelect from './UI/select/MySelect';
 // Компонент для фильтрации постов
 const GameFilter = ({filter, setFilter}) => {
     return ( 
-      <div className="postFilter">
+      <div className="gameFilter">
         <MyInput
           value={filter.query}
           onChange={e => setFilter({...filter, query: e.target.value})}

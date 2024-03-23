@@ -17,7 +17,7 @@ const GameList = ({games, title}) => {
             <h1 style={{textAlign: 'center'}}>
                 {title}
             </h1>
-            <div>
+            <div className="gameList__list">
                 {games.map((game) => 
                     <GameItem key={game.game_id} game={game} />
                 )}
