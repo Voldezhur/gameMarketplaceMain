@@ -19,18 +19,18 @@ const Support = () => {
                     Чем мы можем Вам помочь?
                 </h1>
             </div>
-            <div className="popular_questions">
+            <div className="popular__questions">
                 <h1>
                     Популярные вопросы
                 </h1>
-                <div className="popular_questions_list">
-                    <div className="popular_questions_item">
+                <div className="popular__questions__list">
+                    <div className="popular__questions__item">
                         Если мне не понравится игра, могу ли я вернуть свои деньги?
                     </div>
-                    <div className="popular_questions_item">
+                    <div className="popular__questions__item">
                         Какими способами я могу оплатить товар?
                     </div>
-                    <div className="popular_questions_item">
+                    <div className="popular__questions__item">
                         Как активировать купленный ключ?
                     </div>
                 </div>

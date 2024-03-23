@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import MyButton from '../components/UI/button/MyButton';
+
 // Страница корзины пользователя
 const Cart = () => {
     // Состояние для хранения списка игр в корзине
@@ -18,18 +20,21 @@ const Cart = () => {
 
     return (
         <div className="mainContent">
-            <h1>Корзина с играми</h1>
+            <h1>Корзина</h1>
             {games.map(game => (
                 <div key={game.id} className="game">
                     <div className="game-details">
                         <div className="game-title">{game.title}</div>
                         <div className="game-price">{game.price}</div>
                     </div>
-                    <button onClick={() => removeGame(game.id)}>Удалить</button>
+                    <MyButton onClick={() => removeGame(game.id)}>Удалить</MyButton>
                 </div>
             ))}
             <div className="total">
                 Итого: <span>{total.toFixed(2)}</span>
+            </div>
+            <div className="buy">
+                <MyButton>Перейти к оформлению заказа</MyButton>
             </div>
         </div>
     );

@@ -21,4 +21,12 @@ const Pagination = ({totalPages, page, changePage}) => {
     )
 }
 
+  // метод изменяющий текущую страницу пагинации
+  /*
+  const changePage = (page) => {
+    setPage(page);
+    fetchPosts(limit, page);
+  }
+  */
+
 export default Pagination;

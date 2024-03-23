@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import MyButton from "./UI/button/MyButton";
 
 // Компонент поста
-const PostItem = (props) => {
+const GameItem = (props) => {
     const navigate = useNavigate();
 
     function transitToPost(id) {
@@ -14,13 +14,18 @@ const PostItem = (props) => {
     return (
         <div className="post">
             <div className="post__content">
-                <strong>{props.post.id}. {props.post.title}</strong>
+                <strong>{props.post.game_id}. {props.post.game_name}</strong>
                 <div>
-                    {props.post.body}
+                    {props.post.developer_id}<br/>
+                    {props.post.game_price}<br/>
+                    {props.post.game_raiting}<br/>
+                    {props.post.review_number}<br/>
+                    {props.post.genre_id}<br/>
+                    {props.post.release_date}
                 </div>
             </div>
             <div className="post__buttons">
-                <MyButton onClick={() => transitToPost(props.post.id)}>
+                <MyButton onClick={() => transitToPost(props.post.game_id)}>
                     Открыть
                 </MyButton>
             </div>
@@ -28,4 +33,4 @@ const PostItem = (props) => {
     )
 }
 
-export default PostItem;
+export default GameItem;

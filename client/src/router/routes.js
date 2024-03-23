@@ -1,5 +1,5 @@
-import Posts from "../pages/Posts";
-import PostIdPage from "../pages/PostIdPage";
+import Catalog from "../pages/Catalog";
+import GameIdPage from "../pages/GameIdPage";
 import Cart from "../pages/Cart";
 import Profile from "../pages/Profile";
 import Support from "../pages/Support";
@@ -9,14 +9,14 @@ import ApiTest from "../pages/ApiTest";
 
 // Пути для авторизованного пользователя
 export const privateRoutes = [
-    { path: "/", element: <Posts />, exact: true },
-    { path: "/games", element: <Posts />, exact: true },
-    { path: "/games/:id", element: <PostIdPage />, exact: true },
+    { path: "/", element: <Catalog />, exact: true },
+    { path: "/games", element: <Catalog />, exact: true },
+    { path: "/games/:id", element: <GameIdPage />, exact: true },
     { path: "/cart", element: <Cart />, exact: true },
     { path: "/profile", element: <Profile />, exact: true },
     { path: "/support", element: <Support />, exact: true },
     { path: "*", element: <Error />, exact: true },
-    { path: "/apiTest", element: <ApiTest />, exact: true}
+    { path: "/apitest", element: <ApiTest />, exact: true}
 ]
 
 // Пути для неавторизованного пользователя
