@@ -9,6 +9,6 @@ export default class GameService {
 
     static async getById(id) {
         const response = await axios.get('http://localhost:8000/api/games-list/' + id);
-        return response;
+        return response.data;
     }
 }

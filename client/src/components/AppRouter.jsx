@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import { privateRoutes, publicRoutes } from '../router/routes';
-import { AuthContext } from '../context';
+import { AuthContext } from '../context/AuthContext';
 import Loader from './UI/Loader/Loader';
 
 // Компонент, реализующий роутинг

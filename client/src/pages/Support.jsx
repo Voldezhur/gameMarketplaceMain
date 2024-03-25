@@ -5,18 +5,17 @@ import '../styles/Support.css';
 
 import MyModal from '../components/UI/MyModal/MyModal';
 import MyButton from '../components/UI/button/MyButton';
-import MyInput from '../components/UI/input/MyInput';
 
 // Страница поддержки
 const Support = () => {
     const [modalSupport, setModalSupport] = useState(false); // состояние модального окна
-    const [textArea, setTextArea] = useState("Опишите суть проблемы"); // состояние поля ввода в форму обратной связи
+    const [textArea, setTextArea] = useState(""); // состояние поля ввода в форму обратной связи
 
-    const handleChange = (event) => {
+    const textareaChange = (event) => {
         setTextArea(event.target.value);
     }
 
-    const handleSubmit = (event) => {
+    const feedbackformSubmit = (event) => {
         event.preventDefault();
         alert('Отправленное сообщение:\n' + textArea);
         setModalSupport(false);
@@ -25,40 +24,53 @@ const Support = () => {
 
     return (
         <div className="mainContent">
-            <div className="supportPage__title">
-                <h1>
-                    Добро пожаловать в раздел поддержки!<br/>
-                    Чем мы можем Вам помочь?
-                </h1>
-            </div>
-            <div className="popular__questions">
-                <h1>
+            <h1 className="supportPage__title">
+                Добро пожаловать в раздел поддержки!<br/>
+                Чем мы можем Вам помочь?
+            </h1>
+            <div className="popularQuestions">
+                <h1 className="popularQuestions__title">
                     Популярные вопросы
                 </h1>
-                <div className="popular__questions__list">
-                    <div className="popular__questions__item">
-                        Если мне не понравится игра, могу ли я вернуть свои деньги?
+                <div className="popularQuestions__list">
+                    <div className="popularQuestions__item">
+                        <div className="popularQuestions__item__content">
+                            Если мне не понравится игра, могу ли я вернуть свои деньги?
+                        </div>
+                        <button className="popularQuestions__item__button">
+                            Развернуть
+                        </button>
                     </div>
-                    <div className="popular__questions__item">
-                        Какими способами я могу оплатить товар?
+                    <div className="popularQuestions__item">
+                        <div className="popularQuestions__item__content">
+                            Какими способами я могу оплатить товар?
+                        </div>
+                        <button className="popularQuestions__item__button">
+                            Развернуть
+                        </button>
                     </div>
-                    <div className="popular__questions__item">
-                        Как активировать купленный ключ?
+                    <div className="popularQuestions__item">
+                        <div className="popularQuestions__item__content">
+                            Как активировать купленный ключ?
+                        </div>
+                        <button className="popularQuestions__item__button">
+                            Развернуть
+                        </button>
                     </div>
                 </div>
             </div>
-            <div className="any__questions">
+            <div className="anyQuestions">
                 <MyButton onClick={() => setModalSupport(true)}>
                     Напишите нам
                 </MyButton>
                 <MyModal visible={modalSupport} setVisible={setModalSupport}>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={feedbackformSubmit} className="feedbackform">
                         <label>
                             Опишите суть проблемы:
-                            <MyInput
-                                type="textarea"
+                            <textarea
+                                className="feedbackform__textarea"
                                 value={textArea}
-                                onChange={handleChange}
+                                onChange={textareaChange}
                             />
                         </label>
                         <MyButton>Отправить</MyButton>

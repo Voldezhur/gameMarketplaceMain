@@ -11,7 +11,7 @@ import UserService from '../API/UserService';
 const Profile = () => {
     const [user, setUser] = useState({}); // состояние пользователя
     
-    // метод получения игр в каталог
+    // метод получения данных о пользователе
     const [fetchUsers, isUserLoading, userError] = useFetching(async () => {
         const response = await UserService.getAll();
         setUser(response.users[0]);

@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { AuthContext } from '../context';
+import { AuthContext } from '../context/AuthContext';
 
 import '../styles/App.css';
 import '../styles/Login.css';
@@ -19,7 +19,7 @@ const Login = () => {
     }
 
     // функция авторизации
-    const login = (event) => {
+    const entry = (event) => {
         event.preventDefault();
         setIsAuth(true);
         localStorage.setItem('auth', 'true');
@@ -29,8 +29,10 @@ const Login = () => {
         <div className="mainContent">
             <h1 className="loginPage__title">XTNs Games</h1>
             <div className="login__block">
-                <div className="login__title">Авторизация</div>
-                <form onSubmit={login} className="login__form">
+                <div className="login__title">
+                    Вход в аккаунт XTN
+                </div>
+                <form onSubmit={entry} className="login__form">
                     <MyInput
                         value={formState.login}
                         onChange={e => setFormState({...formState, login: e.target.value})}

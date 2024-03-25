@@ -7,8 +7,8 @@ export default class UserService {
         return response.data;
     }
 
-    static async getById(id) {
-        const response = await axios.get(`http://localgost:8000/api/user/${id}`);
+    static async getById() {
+        const response = await axios.get(`http://localgost:8000/api/user/info`);
         return response.data;
     }
 }
