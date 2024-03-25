@@ -1,3 +1,17 @@
+.catalog__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.catalog__gameError {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(146, 0, 0);
+}
+
 .gameFilter {
     width: 70%;
     min-width: 300px;
@@ -10,15 +24,20 @@
     padding: 10px;
 }
 
+.gameList__title {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
 .game {
-    font-size: 18px;
     background: #eaefff;
     display: flex;
     padding: 10px;
     border: 0px solid #363d56;
     border-radius: 10px;
-    margin: 20px;
+    margin: 20px auto;
     min-width: 400px;
+    max-width: 1000px;
     justify-content: space-between;
     align-items: center;
 }
@@ -28,41 +47,23 @@
 }
 
 .game__content__title {
-    padding: 5px 0 5px 0;
-    margin-bottom: 5;
-    font-size: 24px;
+    margin: 5px 0 10px 0;
+    font-size: 1.2rem;
     font-weight: bold;
     
 }
 
 .game__content__details {
     margin: 10px;
-    font-size: 20px;
 }
 
 .game__content__details__item {
-    padding: 5px 0 5px 0;
+    font-size: 0.9rem;
+    margin: 5px 0;
 }
 
 .game__buttons {
     display: flex;
+    flex-direction: column;
     margin: 20px;
-}
-
-.game-enter {
-    opacity: 0;
-}
-
-.game-enter-active {
-    opacity: 1;
-    transition: opacity 500ms ease-in;
-}
-
-.game-exit {
-    opacity: 1;
-}
-
-.game-exit-active {
-    opacity: 0;
-    transition: opacity 500ms ease-in;
 }

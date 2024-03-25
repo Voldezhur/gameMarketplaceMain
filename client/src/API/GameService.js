@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// Класс со статичными методами для работы с внешним API
+// Класс со статичными методами для подгрузки данных игр
 export default class GameService {
     static async getAll() {
         const response = await axios.get('http://localhost:8000/api/games-list');

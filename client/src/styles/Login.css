@@ -1,10 +1,31 @@
-.loginBlock {
-    width: 50%;
-    min-width: 400px;
-    margin: 30px auto;
-    padding: 20px;
+.loginPage__title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px auto;
 }
 
-.loginForm {
+.login__block {
+    width: 90%;
+    max-width: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    float: center;
+    padding: 20px;
+    background: linear-gradient(10deg, #fdfdfd 100%, #9dfccb 00%);
+    border: 2px solid #363d56;
+    border-radius: 10px;
+    box-shadow: 8px 8px;
+}
+
+.login__title {
+    font-size: 1.4rem;
+    padding: 10px;
+}
+
+.login__form {
     margin: 10px 0;
 }

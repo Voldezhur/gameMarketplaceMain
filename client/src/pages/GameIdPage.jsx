@@ -26,7 +26,7 @@ const GameIdPage = () => {
 
     return (
         <div className="mainContent">
-            <h1>Страница игры с Id = {params.id}!</h1>
+            <h1 className="gameIdPage__title">Страница игры с Id = {params.id}!</h1>
 
             {isLoading
                 ?

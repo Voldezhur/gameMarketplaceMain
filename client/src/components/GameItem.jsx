@@ -7,8 +7,14 @@ import MyButton from "./UI/button/MyButton";
 const GameItem = (props) => {
     const navigate = useNavigate();
 
-    function transitToPost(id) {
+    // функция навигации к игре
+    function transitToGame(id) {
         navigate(`/games/${id}`, {replace: false})
+    }
+
+    // функция добавления товара в корзину
+    function addOnCart() {
+
     }
 
     return (
@@ -42,8 +48,11 @@ const GameItem = (props) => {
                 </div>
             </div>
             <div className="game__buttons">
-                <MyButton onClick={() => transitToPost(props.game.game_id)}>
-                    Открыть
+                <MyButton onClick={() => transitToGame(props.game.game_id)}>
+                    Открыть страницу игры
+                </MyButton>
+                <MyButton onClick={addOnCart}>
+                    Добавить в корзину
                 </MyButton>
             </div>
         </div>

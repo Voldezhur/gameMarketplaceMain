@@ -23,7 +23,7 @@ const Profile = () => {
 
     return (
         <div className="mainContent">
-            <h1>Профиль:</h1>
+            <h1 className="profilePage__title">Профиль:</h1>
             {isUserLoading
             ?
             <Loader />

@@ -5,10 +5,10 @@ export const useSortedGames = (games, sort) => {
   
     const sortedGames = useMemo(() => {
         if (!games.length) {
-          return [];
+          return games;
         }
         else if (sort) {
-          return [...games].sort((a, b) => a[sort].localeCompare(b[sort]))
+          return [...games].sort((a, b) => a[sort].toString().localeCompare(b[sort].toString()))
         }
         return games;
       }, [games, sort])

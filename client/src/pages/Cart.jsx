@@ -18,23 +18,28 @@ const Cart = () => {
     // Вычисление общей стоимости игр
     const total = games.reduce((acc, game) => acc + game.price, 0);
 
+    const purchaseGames = (event) => {
+        event.preventDefault();
+        alert("Заказ на сумму: " + total);
+    }
+
     return (
         <div className="mainContent">
-            <h1>Корзина</h1>
+            <h1 className="cart__title">Корзина</h1>
             {games.map(game => (
                 <div key={game.id} className="game">
                     <div className="game-details">
                         <div className="game-title">{game.title}</div>
                         <div className="game-price">{game.price}</div>
                     </div>
-                    <MyButton onClick={() => removeGame(game.id)}>Удалить</MyButton>
+                    <MyButton onClick={() => removeGame(game.id)}>Удалить из корзины</MyButton>
                 </div>
             ))}
             <div className="total">
                 Итого: <span>{total.toFixed(2)}</span>
             </div>
             <div className="buy">
-                <MyButton>Перейти к оформлению заказа</MyButton>
+                <MyButton onClick={purchaseGames}>Перейти к оформлению заказа</MyButton>
             </div>
         </div>
     );

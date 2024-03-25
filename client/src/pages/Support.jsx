@@ -10,10 +10,22 @@ import MyInput from '../components/UI/input/MyInput';
 // Страница поддержки
 const Support = () => {
     const [modalSupport, setModalSupport] = useState(false); // состояние модального окна
+    const [textArea, setTextArea] = useState("Опишите суть проблемы"); // состояние поля ввода в форму обратной связи
+
+    const handleChange = (event) => {
+        setTextArea(event.target.value);
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        alert('Отправленное сообщение:\n' + textArea);
+        setModalSupport(false);
+        setTextArea("Опишите суть проблемы");
+    }
 
     return (
         <div className="mainContent">
-            <div className="welcome">
+            <div className="supportPage__title">
                 <h1>
                     Добро пожаловать в раздел поддержки!<br/>
                     Чем мы можем Вам помочь?
@@ -40,9 +52,15 @@ const Support = () => {
                     Напишите нам
                 </MyButton>
                 <MyModal visible={modalSupport} setVisible={setModalSupport}>
-                    <form>
-                        <h2>Опишите суть проблемы</h2>
-                        <MyInput type="textarea" placeholder="Введите сообщение"/>
+                    <form onSubmit={handleSubmit}>
+                        <label>
+                            Опишите суть проблемы:
+                            <MyInput
+                                type="textarea"
+                                value={textArea}
+                                onChange={handleChange}
+                            />
+                        </label>
                         <MyButton>Отправить</MyButton>
                     </form>
                 </MyModal>

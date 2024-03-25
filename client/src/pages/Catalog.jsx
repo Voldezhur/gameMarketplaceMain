@@ -32,12 +32,12 @@ const Catalog = () => {
 
   return (
     <div className="mainContent">
-      <h1 style={{textAlign: 'center'}}>Поиск игр</h1>
+      <h1 className="catalog__title">Каталог игр</h1>
       <GameFilter
         filter={filter}
         setFilter={setFilter}
       />
-      {gameError && <h1>ошибка ${gameError}</h1>}
+      {gameError && <div className="catalog__gameError">{gameError}!</div>}
       {isGamesLoading
         ? <div className="loader__block"><Loader /></div>
         : <GameList games={sortedAndSearchedGames} title='Каталог игр' />

@@ -6,17 +6,17 @@ import GameItem from './GameItem';
 const GameList = ({games, title}) => {
     if (!games.length) {
         return (
-            <h1 style={{textAlign: 'center'}}>
+            <h2 className="gameList__title">
                 Игры не найдены...
-            </h1>
+            </h2>
         )
     }
 
     return (
         <div className="gameList">
-            <h1 style={{textAlign: 'center'}}>
+            <h2 className="gameList__title">
                 {title}
-            </h1>
+            </h2>
             <div className="gameList__list">
                 {games.map((game) => 
                     <GameItem key={game.game_id} game={game} />
