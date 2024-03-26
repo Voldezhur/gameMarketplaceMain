@@ -28,21 +28,23 @@ const Profile = () => {
             ?
             <Loader />
             :
-            <div className="profile">
-                
-                <div className="profile__content">
-                    <div className="profile__content__details__item">
-                        Uid: {user.uid}
+            <div className="profilePage__content">
+                <div className="profile">
+                    <div className="profile__content">
+                        <div className="profile__content__item">
+                            Uid: {user.uid}
+                        </div>
+                        <div className="profile__content__item">
+                            Name: {user.name}
+                        </div>
+                        <div className="profile__content__item">
+                            Email: {user.email}
+                        </div>
+                        <div className="profile__content__item">
+                            Registration date: {user.regdate}
+                        </div>
                     </div>
-                    <div className="profile__content__details__item">
-                        Name: {user.name}
-                    </div>
-                    <div className="profile__content__details__item">
-                        Email: {user.email}
-                    </div>
-                    <div className="profile__content__details__item">
-                        Registration date: {user.regdate}
-                    </div>
+                    <img className="profile__image"/>
                 </div>
             </div>
         }

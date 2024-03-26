@@ -16,7 +16,7 @@ const AppRouter = () => {
     return ( 
         isAuth
             ?
-            <div className="app_private_routes">
+            <main className="app_private_routes">
                 <Routes>
                     {privateRoutes.map(route =>
                         <Route
@@ -27,9 +27,9 @@ const AppRouter = () => {
                         />
                     )}
                 </Routes>
-            </div>
+            </main>
             :
-            <div className="app_public_routes">
+            <main className="app_public_routes">
                 <Routes>
                     {publicRoutes.map(route =>
                         <Route
@@ -40,7 +40,7 @@ const AppRouter = () => {
                         />
                     )}
                 </Routes>
-            </div>
+            </main>
         
     );
 }

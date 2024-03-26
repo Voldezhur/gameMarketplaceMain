@@ -10,12 +10,12 @@ import MyButton from '../components/UI/button/MyButton';
 // Страница авторизации
 const Login = () => {
     const {isAuth, setIsAuth} = useContext(AuthContext); // состояние авторизованности
-    const [formState, setFormState] = useState({step: 1, login: "", password: ""}) // состояние полей формы авторизации
+    const [step, setStep] = useState(1); // состояние шага формы
+    const [formData, setFormData] = useState({login: "", password: ""}) // состояние полей формы авторизации
     
-    const continues = (e) => {
-        e.preventDefault();
-        const step = formState.step;
-        setFormState({...formState, step: step + 1});
+    const continues = (event) => {
+        event.preventDefault();
+        setStep(step + 1);
     }
 
     // функция авторизации
@@ -24,6 +24,21 @@ const Login = () => {
         setIsAuth(true);
         localStorage.setItem('auth', 'true');
     }
+
+    /*
+    switch (step) {
+        case 1:
+            return (
+                <LoginForm />
+            )
+        case 2:
+            return (
+                <Success />
+            )
+        default:
+            return null;
+    }
+    */
 
     return (
         <div className="mainContent">
@@ -34,15 +49,15 @@ const Login = () => {
                 </div>
                 <form onSubmit={entry} className="login__form">
                     <MyInput
-                        value={formState.login}
-                        onChange={e => setFormState({...formState, login: e.target.value})}
+                        value={formData.login}
+                        onChange={e => setFormData({...formData, login: e.target.value})}
                         //required={true}
                         type="text"
                         placeholder='Введите логин'
                     />
                     <MyInput
-                        value={formState.password}
-                        onChange={e => setFormState({...formState, password: e.target.value})}
+                        value={formData.password}
+                        onChange={e => setFormData({...formData, password: e.target.value})}
                         //required={true}
                         type="password"
                         placeholder='Введите пароль'

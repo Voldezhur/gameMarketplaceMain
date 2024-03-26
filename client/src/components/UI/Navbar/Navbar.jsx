@@ -21,7 +21,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className={cl.navbar}>
+        <header className={cl.navbar}>
             <div className={cl.navbar__items}>
                 <Link to="/" className={cl.navbar__link}>
                     XTHs Games
@@ -52,7 +52,7 @@ const Navbar = () => {
                     Выйти
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
 
