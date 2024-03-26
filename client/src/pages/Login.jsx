@@ -13,6 +13,7 @@ const Login = () => {
     const [step, setStep] = useState(1); // состояние шага формы
     const [formData, setFormData] = useState({login: "", password: ""}) // состояние полей формы авторизации
     
+    // функция перехода на следующий шаг формы
     const continues = (event) => {
         event.preventDefault();
         setStep(step + 1);

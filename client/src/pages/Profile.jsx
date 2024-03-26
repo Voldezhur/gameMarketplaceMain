@@ -44,7 +44,6 @@ const Profile = () => {
                             Registration date: {user.regdate}
                         </div>
                     </div>
-                    <img className="profile__image"/>
                 </div>
             </div>
         }

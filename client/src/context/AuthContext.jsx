@@ -5,6 +5,7 @@ export const AuthContext = createContext(null);
 
 export const AuthContextProvider = ({children, isAuth, setIsAuth}) => {
     const [user, setUser] = useState(null);
+    const [cartGames, setCartGames] = useState([]);
 
     const login = (userData) => {
         // some logic
@@ -25,7 +26,9 @@ export const AuthContextProvider = ({children, isAuth, setIsAuth}) => {
                 setIsAuth,
                 user,
                 login,
-                logout
+                logout,
+                cartGames,
+                setCartGames
             }}
         >
             {children}

@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { AuthContext } from "../context/AuthContext";
 import MyButton from "./UI/button/MyButton";
 
 // Компонент поста
 const GameItem = (props) => {
+    const {cartGames, setCartGames} = useContext(AuthContext);
     const navigate = useNavigate();
 
     // функция навигации к игре
@@ -13,8 +15,11 @@ const GameItem = (props) => {
     }
 
     // функция добавления товара в корзину
-    function addOnCart() {
-
+    const addOnCart = () => {
+        const game = props.game;
+        if (!cartGames.some(g => g.game_id === game.game_id)) {
+            setCartGames([...cartGames, game]);
+        }
     }
 
     return (
